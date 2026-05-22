@@ -3,6 +3,7 @@ from toolkit.main import app
 
 client = TestClient(app)
 
+
 def test_hello() -> None:
     response = client.get("/hello")
     assert response.status_code == 200
