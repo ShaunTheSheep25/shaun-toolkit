@@ -190,4 +190,14 @@ async def read_items(skip: int = 0, limit: int = 10):
 
 Setting the default to `None` makes a parameter fully optional. Omitting the default entirely makes it required - FastAPI will return an error if the caller doesn't provide it. FastAPI is also smart about bool query parameters — values like "true", "yes", "1", and "on" (i.e, any value apart from 0, False, None, '' etc.) all get correctly parsed to `True`.
 
+## What Surprised Me
+
+There were quite a few things I learnt while going through the reading material that struck me as very interesting -
+
+- I expected FastAPI to be a lot of work, even to set up a simple "hello world" endpoint, but it effectively rendered as just 5 lines of simple, readable code. Everything from the setting up of the development environment to the syntax was quite comprehensible
+
+- It struck me as interesting that Python effectively ignores the type hints during runtime and still allows for the assignment of values to variables that have a different type annotated to them, while in the case of FastAPI, having the type annotations is crucial to knowing what kind of data type needs to be passed as path/query parameters to the app URL.
+
+- The fact that FastAPI automatically sets up an interactive documentation page for us to monitor the endpoint is surprisingly convenient in regards to monitoring error codes + successful transfer of requests and responses
+
 
